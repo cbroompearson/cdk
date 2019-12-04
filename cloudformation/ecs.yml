@@ -1,0 +1,337 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Deploy a service on AWS Fargate, hosted in a private subnet, but accessible via a public load balancer.
+Parameters:
+  ServiceCatalogStackID:
+    Type: String
+    Default: SC-xx-pp-xx
+    Description: The StackName value from the VPC product deployment
+
+  TagDcl:
+    Description: 'The t_dcl tag for resources'
+    Type: String
+    Default: 1
+    AllowedValues:
+    - 1
+    - 2
+    - 3
+    - 4
+
+  TagCostcenter:
+    Type: String
+    AllowedPattern: "(.*\\d.*)"
+    Description: "The cost center tag for your project"
+
+  TagAppid:
+    Type: String
+    AllowedPattern: "SVC\\d{5}"
+    Description: "The App ID for your project, must be format SVCNNNNN"
+
+  RetentionInDays:
+    Description: 'Specifies the number of days you want to retain log events.'
+    Type: Number
+    Default: 365
+
+  TrafficType:
+    Description: 'The type of traffic to log.'
+    Type: String
+    Default: ALL
+    AllowedValues:
+    - ACCEPT
+    - REJECT
+    - ALL
+
+  ServiceName:
+    Type: String
+    Default: servicename
+    Description: "Used as a 3 letter acrynom or whatever you want to append to the name of all resources, we use $ServiceName-$EnvType for naming."
+
+  EnvTag:
+    Type: String
+    Default: DEV
+    Description: "A friendly environment name that will be used for namespacing all cluster resources as well as tagging."
+    AllowedValues:
+    - DEV
+    - QA
+    - DR
+    - POC
+    - PRD
+    - PRF
+    - QA
+    - STG
+    - TST
+
+  EnvType:
+    Type: String
+    Default: dev
+    Description: "A friendly environment name that will be used for namespacing all cluster resources as well as tagging."
+    AllowedValues:
+    - dev
+    - qa
+    - dr
+    - poc
+    - prd
+    - prf
+    - qa
+    - stg
+    - tst
+
+Resources:
+  # ECS Resources
+  ECSCluster:
+    Type: AWS::ECS::Cluster
+    Properties:
+      ClusterName: !Join ['-', [!Ref ServiceName, !Ref EnvType, 'ecs']]
+      Tags:
+        - Key: Name
+          Value: !Join
+            - '-'
+            - - !Ref ServiceName
+              - !Ref EnvType
+              - 'ecs'
+        - Key: t_AppID
+          Value: !Ref TagAppid
+        - Key: t_cost_centre
+          Value: !Ref TagCostcenter
+        - Key: t_dcl
+          Value: !Ref TagDcl
+        - Key: t_environment
+          Value: !Ref EnvTag
+  
+  # A security group for the containers we will run in Fargate.
+  # Two rules, allowing network traffic from a public facing load
+  # balancer, and from other members
+  # of the security group.
+  #
+  DefaultSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Application Instances
+      GroupName: !Join
+            - '-'
+            - - !Ref ServiceName
+              - !Ref EnvType
+              - 'app-instances'
+      VpcId:
+        Fn::ImportValue:
+          !Join [':', [!Ref 'ServiceCatalogStackID', 'VPCId']]
+      Tags:
+        - Key: Name
+          Value: !Join
+            - '-'
+            - - !Ref ServiceName
+              - !Ref EnvType
+              - 'app-instances'
+        - Key: t_AppID
+          Value: !Ref TagAppid
+        - Key: t_cost_centre
+          Value: !Ref TagCostcenter
+        - Key: t_dcl
+          Value: !Ref TagDcl
+        - Key: t_environment
+          Value: !Ref EnvTag
+
+  EcsSecurityGroupIngressFromPublicALB:
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      Description: Ingress from the public ALB
+      GroupId: !Ref 'DefaultSecurityGroup'
+      IpProtocol: -1
+      SourceSecurityGroupId: !Ref 'PublicLoadBalancerSG'
+  EcsSecurityGroupIngressFromSelf:
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      Description: Ingress from other containers in the same security group
+      GroupId: !Ref 'DefaultSecurityGroup'
+      IpProtocol: -1
+      SourceSecurityGroupId: !Ref 'DefaultSecurityGroup'
+
+  # Load balancer for getting traffic to containers.
+  # 
+  #
+  # One public load balancer, hosted in public subnets that is accessible
+  # to the public, and is intended to route traffic to one or more public
+  # facing services.
+  PublicLoadBalancerSG:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: ALB Rules for App
+      VpcId:
+        Fn::ImportValue:
+          !Join [':', [!Ref 'ServiceCatalogStackID', 'VPCId']]
+      SecurityGroupIngress:
+          # Allow access to ALB from anywhere on the internet
+            - SourceSecurityGroupId:
+                Fn::GetAtt:
+                - DefaultSecurityGroup
+                - GroupId
+              IpProtocol: -1
+            - CidrIp: 0.0.0.0/0
+              IpProtocol: TCP
+              FromPort: 443
+              ToPort: 443
+            - CidrIp: 0.0.0.0/0
+              IpProtocol: TCP
+              FromPort: 27017
+              ToPort: 27017
+      SecurityGroupEgress:
+          # Allow access to ALB from anywhere on the internet
+            - SourceSecurityGroupId:
+                Fn::GetAtt:
+                - DefaultSecurityGroup
+                - GroupId
+              IpProtocol: -1
+      GroupName: !Join ['-', [!Ref ServiceName, !Ref EnvType, 'app-alb']]
+      Tags:
+        - Key: Name
+          Value: !Join
+            - '-'
+            - - !Ref ServiceName
+              - !Ref EnvType
+              - 'app-alb'
+        - Key: t_AppID
+          Value: !Ref TagAppid
+        - Key: t_cost_centre
+          Value: !Ref TagCostcenter
+        - Key: t_dcl
+          Value: !Ref TagDcl
+        - Key: t_environment
+          Value: !Ref EnvTag
+          
+  PublicLoadBalancer:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      Name: !Join ['-', [!Ref ServiceName, !Ref EnvType, 'alb']]
+      Scheme: internet-facing
+      LoadBalancerAttributes:
+      - Key: idle_timeout.timeout_seconds
+        Value: '30'
+      Subnets: 
+        - Fn::ImportValue:
+            !Sub "${ServiceCatalogStackID}:PublicSubnetOne"
+        - Fn::ImportValue:
+            !Sub "${ServiceCatalogStackID}:PublicSubnetTwo"      
+      SecurityGroups: [!Ref 'PublicLoadBalancerSG']
+      Tags:
+        - Key: t_AppID
+          Value: !Ref TagAppid
+        - Key: t_cost_centre
+          Value: !Ref TagCostcenter
+        - Key: t_dcl
+          Value: !Ref TagDcl
+        - Key: t_environment
+          Value: !Ref EnvType
+  
+  TargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      Name: !Join ['-', [!Ref 'ServiceName', !Ref 'EnvType', 'tg']]
+      TargetType: ip
+      Name: !Ref 'ServiceName'
+      Port: 443
+      Protocol: HTTPS
+      VpcId:
+        Fn::ImportValue:
+          !Join [':', [!Ref 'ServiceCatalogStackID', 'VPCId']]
+      Tags:
+        - Key: t_AppID
+          Value: !Ref TagAppid
+        - Key: t_cost_centre
+          Value: !Ref TagCostcenter
+        - Key: t_dcl
+          Value: !Ref TagDcl
+        - Key: t_environment
+          Value: !Ref EnvTag
+
+  PublicLoadBalancerListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      Certificates:
+      - CertificateArn: 'arn:aws:acm:us-east-1:829809672214:certificate/a84bb369-03ce-4e5e-9d32-8c84609cad1e'
+      DefaultActions:
+        - TargetGroupArn: !Ref 'TargetGroup'
+          Type: 'forward'
+      LoadBalancerArn: !Ref 'PublicLoadBalancer'
+      Port: 443
+      Protocol: HTTPS
+
+
+  # This is a role which is used by the ECS tasks themselves.
+  ECSTaskExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Join ['-', [!Ref 'ServiceName', !Ref 'EnvType', 'ecs-task-role']]
+      AssumeRolePolicyDocument:
+        Statement:
+        - Effect: Allow
+          Principal:
+            Service: [ecs-tasks.amazonaws.com]
+          Action: ['sts:AssumeRole']
+      Path: /
+      Policies:
+        - PolicyName: AmazonECSTaskExecutionRolePolicy
+          PolicyDocument:
+            Statement:
+            - Effect: Allow
+              Action:
+                # Allow the ECS Tasks to download images from ECR
+                - 'ecr:GetAuthorizationToken'
+                - 'ecr:BatchCheckLayerAvailability'
+                - 'ecr:GetDownloadUrlForLayer'
+                - 'ecr:BatchGetImage'
+
+                # Allow the ECS tasks to upload logs to CloudWatch
+                - 'logs:CreateLogStream'
+                - 'logs:PutLogEvents'
+                - 'logs:DescribeLogGroups'
+                - 'logs:DescribeLogStreams'
+
+                # Dynamodb Options
+                - 'dynamodb:List*'
+                - 'dynamodb:Get*'
+                - 'dynamodb:Query'
+
+                #Firehose Options
+                - 'firehose:PutRecord'
+                - 'firehose:PutRecordBatch'
+
+                #Parameter Store
+                - 'ssm:GetParameters' 
+              Resource: '*'
+
+# These are the values output by the CloudFormation template. Be careful
+# about changing any of them, because of them are exported with specific
+# names so that the other task related CF templates can use them.
+Outputs:
+  StackName:
+    Description: 'Stack name.'
+    Value: !Sub '${AWS::StackName}'
+  ClusterName:
+    Description: The name of the ECS cluster
+    Value: !Ref 'ECSCluster'
+    Export:
+      Name: !Join [ ':', [ !Ref 'AWS::StackName', 'ClusterName' ] ]
+  ExternalUrl:
+    Description: The url of the external load balancer
+    Value: !Join ['', ['https://', !GetAtt 'PublicLoadBalancer.DNSName']]
+    Export:
+      Name: !Join [ ':', [ !Ref 'AWS::StackName', 'ExternalUrl' ] ]
+  ECSTaskExecutionRole:
+    Description: The ARN of the ECS role
+    Value: !GetAtt 'ECSTaskExecutionRole.Arn'
+    Export:
+      Name: !Join [ ':', [ !Ref 'AWS::StackName', 'ECSTaskExecutionRole' ] ]
+  DefaultSecurityGroup:
+    Description: A security group used to allow Fargate containers to receive traffic
+    Value: !Ref 'DefaultSecurityGroup'
+    Export:
+      Name: !Join [ ':', [ !Ref 'AWS::StackName', 'DefaultSecurityGroup' ] ]
+  PublicLoadBalancerARN:
+    Description: 'The ARN of the public load balancer'
+    Value: !Ref 'PublicLoadBalancer'
+    Export:
+      Name: !Join [ ':', [ !Ref 'AWS::StackName', 'PublicLoadBalancer' ] ]
+  PublicLoadBalancerListener:
+    Description: The ARN of the ALB listener
+    Value: !Ref 'PublicLoadBalancerListener'
+    Export:
+      Name: !Join [ ':', [ !Ref 'AWS::StackName', 'PublicLoadBalancerListener' ] ]

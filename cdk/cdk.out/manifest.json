@@ -1,0 +1,1382 @@
+{
+  "version": "0.36.0",
+  "artifacts": {
+    "oculus-cdk-dev": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://829809672214/us-east-1",
+      "properties": {
+        "templateFile": "oculus-cdk-dev.template.json"
+      },
+      "metadata": {
+        "/oculus-cdk-dev": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "t_environment",
+                "Value": "DEV"
+              },
+              {
+                "Key": "t_AppID",
+                "Value": "SVC01831"
+              },
+              {
+                "Key": "t_cost_centre",
+                "Value": "10.365.74172.3651039.40857.0000.35"
+              },
+              {
+                "Key": "t_dcl",
+                "Value": "2"
+              },
+              {
+                "Key": "Application",
+                "Value": "oculus-cdk"
+              },
+              {
+                "Key": "Name",
+                "Value": "Oculus-cdk"
+              }
+            ],
+            "trace": [
+              "Stack.prepare (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/core/lib/stack.js:369:23)",
+              "Function.prepare (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/core/lib/construct.js:89:27)",
+              "Function.synth (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/core/lib/construct.js:52:14)",
+              "App.synth (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/core/lib/app.js:67:52)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:51",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:25",
+              "Kernel._ensureSync (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7226:20)",
+              "Kernel.invoke (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6630:26)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/FlowLog/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FlowLog22E63E81",
+            "trace": [
+              "new Role (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-iam/lib/role.js:35:22)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/FlowLog/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FlowLogDefaultPolicy695E1D6F",
+            "trace": [
+              "new Policy (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-iam/lib/policy.js:29:26)",
+              "Role.addToPolicy (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-iam/lib/role.js:153:34)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:51",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:25",
+              "Kernel._ensureSync (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7226:20)",
+              "Kernel.invoke (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6630:26)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogGroupF5B46931",
+            "trace": [
+              "new LogGroup (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-logs/lib/log-group.js:182:26)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpc3AD1259A",
+            "trace": [
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:230:25)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpcPublicSubnet1Subnet28944A79",
+            "trace": [
+              "new Subnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:521:24)",
+              "new PublicSubnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:615:9)",
+              "/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:450:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpcPublicSubnet1RouteTable2BF12AAB",
+            "trace": [
+              "new Subnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:536:23)",
+              "new PublicSubnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:615:9)",
+              "/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:450:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpcPublicSubnet1RouteTableAssociation5059F605",
+            "trace": [
+              "new Subnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:541:9)",
+              "new PublicSubnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:615:9)",
+              "/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:450:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpcPublicSubnet1DefaultRouteFA0C0CD7",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:23)",
+              "/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:259:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:258:32)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpcPublicSubnet1EIPB4AE39E2",
+            "trace": [
+              "PublicSubnet.addNatGateway (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:626:27)",
+              "Vpc.createNatGateways (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:409:33)",
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:262:18)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpcPublicSubnet1NATGateway7B8503F9",
+            "trace": [
+              "PublicSubnet.addNatGateway (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:624:21)",
+              "Vpc.createNatGateways (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:409:33)",
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:262:18)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpcPublicSubnet2Subnet0F82F660",
+            "trace": [
+              "new Subnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:521:24)",
+              "new PublicSubnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:615:9)",
+              "/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:450:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpcPublicSubnet2RouteTable2E8CABF2",
+            "trace": [
+              "new Subnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:536:23)",
+              "new PublicSubnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:615:9)",
+              "/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:450:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpcPublicSubnet2RouteTableAssociationD67ABAC2",
+            "trace": [
+              "new Subnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:541:9)",
+              "new PublicSubnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:615:9)",
+              "/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:450:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpcPublicSubnet2DefaultRoute3339039E",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:23)",
+              "/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:259:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:258:32)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/PublicSubnet2/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpcPublicSubnet2EIPE69DABA0",
+            "trace": [
+              "PublicSubnet.addNatGateway (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:626:27)",
+              "Vpc.createNatGateways (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:409:33)",
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:262:18)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/PublicSubnet2/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpcPublicSubnet2NATGateway995BB459",
+            "trace": [
+              "PublicSubnet.addNatGateway (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:624:21)",
+              "Vpc.createNatGateways (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:409:33)",
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:262:18)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpcPrivateSubnet1Subnet1D484AA7",
+            "trace": [
+              "new Subnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:521:24)",
+              "new PrivateSubnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:642:9)",
+              "/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:455:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpcPrivateSubnet1RouteTable8C6E56CE",
+            "trace": [
+              "new Subnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:536:23)",
+              "new PrivateSubnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:642:9)",
+              "/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:455:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpcPrivateSubnet1RouteTableAssociation238E3305",
+            "trace": [
+              "new Subnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:541:9)",
+              "new PrivateSubnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:642:9)",
+              "/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:455:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpcPrivateSubnet1DefaultRouteF709FD22",
+            "trace": [
+              "PrivateSubnet.addDefaultNatRoute (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:589:23)",
+              "/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:270:31",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:263:33)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpcPrivateSubnet2SubnetD2DDD4B4",
+            "trace": [
+              "new Subnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:521:24)",
+              "new PrivateSubnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:642:9)",
+              "/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:455:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpcPrivateSubnet2RouteTableD9A9A5C3",
+            "trace": [
+              "new Subnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:536:23)",
+              "new PrivateSubnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:642:9)",
+              "/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:455:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpcPrivateSubnet2RouteTableAssociation18856AD8",
+            "trace": [
+              "new Subnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:541:9)",
+              "new PrivateSubnet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:642:9)",
+              "/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:455:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpcPrivateSubnet2DefaultRoute7CA17073",
+            "trace": [
+              "PrivateSubnet.addDefaultNatRoute (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:589:23)",
+              "/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:270:31",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:263:33)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpcIGWA31F8767",
+            "trace": [
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:252:25)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/oculus-cdk-dev-vpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oculuscdkdevvpcVPCGWB03ADCC1",
+            "trace": [
+              "new Vpc (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:254:25)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/FlowLogs": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FlowLogs",
+            "trace": [
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/EcSSG/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcSSG8314FCBD",
+            "trace": [
+              "new SecurityGroup (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:131:30)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/AlbSG/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AlbSGE6D0E5D1",
+            "trace": [
+              "new SecurityGroup (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:131:30)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/ALB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALBAEE750D2",
+            "trace": [
+              "new BaseLoadBalancer (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-load-balancer.js:23:26)",
+              "new ApplicationLoadBalancer (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-load-balancer.js:16:9)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/ALB/Listener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALBListener3B99FF85",
+            "trace": [
+              "new BaseListener (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-listener.js:12:26)",
+              "new ApplicationListener (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:22:9)",
+              "ApplicationLoadBalancer.addListener (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-load-balancer.js:64:16)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:51",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:25",
+              "Kernel._ensureSync (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7226:20)",
+              "Kernel.invoke (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6630:26)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/ALB/Listener/ECSAPIGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALBListenerECSAPIGroup52879595",
+            "trace": [
+              "new TargetGroupBase (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-target-group.js:31:25)",
+              "new ApplicationTargetGroup (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.js:15:9)",
+              "ApplicationListener.addTargets (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:116:23)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:51",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:25",
+              "Kernel._ensureSync (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7226:20)",
+              "Kernel.invoke (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6630:26)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/ALB/Listener/ECSAPIRule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALBListenerECSAPIRule75B9D990",
+            "trace": [
+              "new ApplicationListenerRule (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener-rule.js:31:26)",
+              "ApplicationListener.addTargetGroups (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:85:13)",
+              "ApplicationListener.addTargets (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:127:14)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:51",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:25",
+              "Kernel._ensureSync (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7226:20)",
+              "Kernel.invoke (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6630:26)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/ALB/Listener/ECSTCAGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALBListenerECSTCAGroup698EE084",
+            "trace": [
+              "new TargetGroupBase (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-target-group.js:31:25)",
+              "new ApplicationTargetGroup (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.js:15:9)",
+              "ApplicationListener.addTargets (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:116:23)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:51",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:25",
+              "Kernel._ensureSync (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7226:20)",
+              "Kernel.invoke (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6630:26)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/ALB/Listener/ECSTCARule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALBListenerECSTCARule31381C99",
+            "trace": [
+              "new ApplicationListenerRule (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener-rule.js:31:26)",
+              "ApplicationListener.addTargetGroups (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:85:13)",
+              "ApplicationListener.addTargets (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:127:14)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:51",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:25",
+              "Kernel._ensureSync (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7226:20)",
+              "Kernel.invoke (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6630:26)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/ALB/Listener/ECSWebGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALBListenerECSWebGroupDD20DAE4",
+            "trace": [
+              "new TargetGroupBase (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-target-group.js:31:25)",
+              "new ApplicationTargetGroup (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.js:15:9)",
+              "ApplicationListener.addTargets (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:116:23)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:51",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:25",
+              "Kernel._ensureSync (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7226:20)",
+              "Kernel.invoke (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6630:26)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/ApiTargetGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiTargetGroup5723F19D",
+            "trace": [
+              "new TargetGroupBase (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-target-group.js:31:25)",
+              "new ApplicationTargetGroup (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.js:15:9)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/WebTargetGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebTargetGroup12079923",
+            "trace": [
+              "new TargetGroupBase (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-target-group.js:31:25)",
+              "new ApplicationTargetGroup (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.js:15:9)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/TcaTargetGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TcaTargetGroupE57E3D9C",
+            "trace": [
+              "new TargetGroupBase (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-target-group.js:31:25)",
+              "new ApplicationTargetGroup (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.js:15:9)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/ECSCluster/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ECSCluster7D463CD4",
+            "trace": [
+              "new Cluster (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/cluster.js:31:25)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/ECSExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ECSExecutionRoleA044C6CA",
+            "trace": [
+              "new Role (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-iam/lib/role.js:35:22)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/ECSExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ECSExecutionRoleDefaultPolicy91A8E3CE",
+            "trace": [
+              "new Policy (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-iam/lib/policy.js:29:26)",
+              "Role.addToPolicy (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-iam/lib/role.js:153:34)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:51",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:25",
+              "Kernel._ensureSync (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7226:20)",
+              "Kernel.invoke (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6630:26)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/ECSTaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ECSTaskRoleF2ADB362",
+            "trace": [
+              "new Role (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-iam/lib/role.js:35:22)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/ECSTaskRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ECSTaskRoleDefaultPolicy82FC9293",
+            "trace": [
+              "new Policy (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-iam/lib/policy.js:29:26)",
+              "Role.addToPolicy (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-iam/lib/role.js:153:34)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:51",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:25",
+              "Kernel._ensureSync (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7226:20)",
+              "Kernel.invoke (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6630:26)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/APIFargateTask/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIFargateTask4866CA56",
+            "trace": [
+              "new TaskDefinition (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/base/task-definition.js:63:25)",
+              "new FargateTaskDefinition (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-task-definition.js:18:9)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/WebFargateTask/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WebFargateTask53DB7E54",
+            "trace": [
+              "new TaskDefinition (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/base/task-definition.js:63:25)",
+              "new FargateTaskDefinition (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-task-definition.js:18:9)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/TcaFargateTask/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TcaFargateTaskAE2871A3",
+            "trace": [
+              "new TaskDefinition (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/base/task-definition.js:63:25)",
+              "new FargateTaskDefinition (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-task-definition.js:18:9)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/FargateServiceAPI/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceAPIService2D690B6F",
+            "trace": [
+              "new BaseService (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.js:39:25)",
+              "new FargateService (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-service.js:30:9)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/FargateServiceAPI/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceAPISecurityGroupE23F0CF7",
+            "trace": [
+              "new SecurityGroup (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:131:30)",
+              "FargateService.configureAwsVpcNetworking (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.js:157:29)",
+              "new FargateService (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-service.js:35:14)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/FargateServiceAPI/SecurityGroup/from oculuscdkdevAlbSG4F26A62C:8080": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceAPISecurityGroupfromoculuscdkdevAlbSG4F26A62C8080C91B4C98",
+            "trace": [
+              "SecurityGroup.addIngressRule (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:33:13)",
+              "SecurityGroup.addIngressRule (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:163:19)",
+              "/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/connections.js:89:31",
+              "ReactiveList.forEachAndForever (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/connections.js:191:13)",
+              "/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/connections.js:88:51",
+              "ReactiveList.forEachAndForever (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/connections.js:191:13)",
+              "Connections.allowFrom (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/connections.js:87:30)",
+              "ApplicationListener.registerConnectable (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:162:33)",
+              "ApplicationTargetGroup.registerListener (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.js:79:22)",
+              "ApplicationListenerRule.addTargetGroup (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener-rule.js:63:21)",
+              "Array.forEach (<anonymous>)",
+              "new ApplicationListenerRule (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener-rule.js:43:36)",
+              "ApplicationListener.addTargetGroups (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:85:13)",
+              "ApplicationListener.addTargets (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:127:14)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:51",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:25",
+              "Kernel._ensureSync (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7226:20)",
+              "Kernel.invoke (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6630:26)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/FargateServiceAPI/TaskCount/Target/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceAPITaskCountTargetD4665865",
+            "trace": [
+              "new ScalableTarget (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-applicationautoscaling/lib/scalable-target.js:33:26)",
+              "new BaseScalableAttribute (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-applicationautoscaling/lib/base-scalable-attribute.js:23:23)",
+              "new ScalableTaskCount (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/base/scalable-task-count.js:12:9)",
+              "FargateService.autoScaleTaskCount (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.js:124:41)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:51",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:25",
+              "Kernel._ensureSync (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7226:20)",
+              "Kernel.invoke (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6630:26)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/FargateServiceAPI/TaskCount/Target/ApiCpuScaling/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceAPITaskCountTargetApiCpuScalingC514A006",
+            "trace": [
+              "new TargetTrackingScalingPolicy (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-applicationautoscaling/lib/target-tracking-scaling-policy.js:11:26)",
+              "ScalableTarget.scaleToTrackMetric (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-applicationautoscaling/lib/scalable-target.js:87:16)",
+              "ScalableTaskCount.doScaleToTrackMetric (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-applicationautoscaling/lib/base-scalable-attribute.js:48:21)",
+              "ScalableTaskCount.scaleOnCpuUtilization (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/base/scalable-task-count.js:30:22)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:51",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:25",
+              "Kernel._ensureSync (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7226:20)",
+              "Kernel.invoke (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6630:26)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/FargateServiceWeb/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceWebServiceDBCCCCEC",
+            "trace": [
+              "new BaseService (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.js:39:25)",
+              "new FargateService (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-service.js:30:9)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/FargateServiceWeb/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceWebSecurityGroup9B2D885B",
+            "trace": [
+              "new SecurityGroup (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:131:30)",
+              "FargateService.configureAwsVpcNetworking (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.js:157:29)",
+              "new FargateService (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-service.js:35:14)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/FargateServiceWeb/SecurityGroup/from oculuscdkdevAlbSG4F26A62C:3030": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceWebSecurityGroupfromoculuscdkdevAlbSG4F26A62C303019562652",
+            "trace": [
+              "SecurityGroup.addIngressRule (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:33:13)",
+              "SecurityGroup.addIngressRule (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:163:19)",
+              "/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/connections.js:89:31",
+              "ReactiveList.forEachAndForever (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/connections.js:191:13)",
+              "/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/connections.js:88:51",
+              "ReactiveList.forEachAndForever (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/connections.js:191:13)",
+              "Connections.allowFrom (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/connections.js:87:30)",
+              "ApplicationListener.registerConnectable (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:162:33)",
+              "ApplicationTargetGroup.registerListener (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.js:79:22)",
+              "ApplicationListener.addDefaultTargetGroup (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:179:21)",
+              "ApplicationListener.addTargetGroups (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:96:22)",
+              "ApplicationListener.addTargets (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:127:14)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:51",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:25",
+              "Kernel._ensureSync (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7226:20)",
+              "Kernel.invoke (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6630:26)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/FargateServiceWeb/TaskCount/Target/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceWebTaskCountTarget06FCFD34",
+            "trace": [
+              "new ScalableTarget (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-applicationautoscaling/lib/scalable-target.js:33:26)",
+              "new BaseScalableAttribute (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-applicationautoscaling/lib/base-scalable-attribute.js:23:23)",
+              "new ScalableTaskCount (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/base/scalable-task-count.js:12:9)",
+              "FargateService.autoScaleTaskCount (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.js:124:41)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:51",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:25",
+              "Kernel._ensureSync (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7226:20)",
+              "Kernel.invoke (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6630:26)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/FargateServiceWeb/TaskCount/Target/WebCpuScaling/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceWebTaskCountTargetWebCpuScaling7564EA2B",
+            "trace": [
+              "new TargetTrackingScalingPolicy (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-applicationautoscaling/lib/target-tracking-scaling-policy.js:11:26)",
+              "ScalableTarget.scaleToTrackMetric (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-applicationautoscaling/lib/scalable-target.js:87:16)",
+              "ScalableTaskCount.doScaleToTrackMetric (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-applicationautoscaling/lib/base-scalable-attribute.js:48:21)",
+              "ScalableTaskCount.scaleOnCpuUtilization (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/base/scalable-task-count.js:30:22)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:51",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:25",
+              "Kernel._ensureSync (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7226:20)",
+              "Kernel.invoke (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6630:26)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/FargateServiceTCA/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceTCAService1F850948",
+            "trace": [
+              "new BaseService (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.js:39:25)",
+              "new FargateService (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-service.js:30:9)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/FargateServiceTCA/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceTCASecurityGroup9BD69D38",
+            "trace": [
+              "new SecurityGroup (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:131:30)",
+              "FargateService.configureAwsVpcNetworking (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.js:157:29)",
+              "new FargateService (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-service.js:35:14)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/FargateServiceTCA/SecurityGroup/from oculuscdkdevAlbSG4F26A62C:8080": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceTCASecurityGroupfromoculuscdkdevAlbSG4F26A62C8080630FF1D0",
+            "trace": [
+              "SecurityGroup.addIngressRule (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:33:13)",
+              "SecurityGroup.addIngressRule (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:163:19)",
+              "/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/connections.js:89:31",
+              "ReactiveList.forEachAndForever (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/connections.js:191:13)",
+              "/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/connections.js:88:51",
+              "ReactiveList.forEachAndForever (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/connections.js:191:13)",
+              "Connections.allowFrom (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ec2/lib/connections.js:87:30)",
+              "ApplicationListener.registerConnectable (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:162:33)",
+              "ApplicationTargetGroup.registerListener (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.js:79:22)",
+              "ApplicationListenerRule.addTargetGroup (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener-rule.js:63:21)",
+              "Array.forEach (<anonymous>)",
+              "new ApplicationListenerRule (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener-rule.js:43:36)",
+              "ApplicationListener.addTargetGroups (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:85:13)",
+              "ApplicationListener.addTargets (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:127:14)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:51",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:25",
+              "Kernel._ensureSync (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7226:20)",
+              "Kernel.invoke (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6630:26)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/FargateServiceTCA/TaskCount/Target/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceTCATaskCountTargetBA1C2C8D",
+            "trace": [
+              "new ScalableTarget (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-applicationautoscaling/lib/scalable-target.js:33:26)",
+              "new BaseScalableAttribute (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-applicationautoscaling/lib/base-scalable-attribute.js:23:23)",
+              "new ScalableTaskCount (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/base/scalable-task-count.js:12:9)",
+              "FargateService.autoScaleTaskCount (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.js:124:41)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:51",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:25",
+              "Kernel._ensureSync (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7226:20)",
+              "Kernel.invoke (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6630:26)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/FargateServiceTCA/TaskCount/Target/TcaCpuScaling/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateServiceTCATaskCountTargetTcaCpuScaling8C039299",
+            "trace": [
+              "new TargetTrackingScalingPolicy (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-applicationautoscaling/lib/target-tracking-scaling-policy.js:11:26)",
+              "ScalableTarget.scaleToTrackMetric (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-applicationautoscaling/lib/scalable-target.js:87:16)",
+              "ScalableTaskCount.doScaleToTrackMetric (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-applicationautoscaling/lib/base-scalable-attribute.js:48:21)",
+              "ScalableTaskCount.scaleOnCpuUtilization (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-ecs/lib/base/scalable-task-count.js:30:22)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:51",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6631:25",
+              "Kernel._ensureSync (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7226:20)",
+              "Kernel.invoke (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6630:26)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LoadBalancerDNS",
+            "trace": [
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ],
+        "/oculus-cdk-dev/ServiceAliasRecord/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceAliasRecord7C72B6F0",
+            "trace": [
+              "new RecordSet (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-route53/lib/record-set.js:59:27)",
+              "new ARecord (/private/var/folders/7p/374v1n_s45l6v_p9ry_jj4xw0000gp/T/jsii-kernel-vDTkrH/node_modules/@aws-cdk/aws-route53/lib/record-set.js:85:9)",
+              "/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:49",
+              "Kernel._wrapSandboxCode (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7250:20)",
+              "Kernel._create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6798:26)",
+              "Kernel.create (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6552:21)",
+              "KernelHost.processRequest (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6327:28)",
+              "KernelHost.run (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6270:14)",
+              "Immediate._onImmediate (/Users/vbroocu/z_workspace/oculus-cdk/oculus-devops/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6273:37)",
+              "processImmediate (internal/timers.js:439:21)"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/cx-api": "1.9.0",
+      "@aws-cdk/core": "1.9.0",
+      "@aws-cdk/region-info": "1.9.0",
+      "@aws-cdk/aws-iam": "1.9.0",
+      "@aws-cdk/aws-cloudwatch": "1.9.0",
+      "@aws-cdk/aws-ssm": "1.9.0",
+      "@aws-cdk/aws-ec2": "1.9.0",
+      "@aws-cdk/aws-autoscaling-common": "1.9.0",
+      "@aws-cdk/aws-applicationautoscaling": "1.9.0",
+      "@aws-cdk/aws-elasticloadbalancing": "1.9.0",
+      "@aws-cdk/aws-events": "1.9.0",
+      "@aws-cdk/aws-logs": "1.9.0",
+      "@aws-cdk/aws-kms": "1.9.0",
+      "@aws-cdk/aws-s3": "1.9.0",
+      "@aws-cdk/assets": "1.9.0",
+      "@aws-cdk/aws-s3-assets": "1.9.0",
+      "@aws-cdk/aws-sqs": "1.9.0",
+      "@aws-cdk/aws-lambda": "1.9.0",
+      "@aws-cdk/aws-sns": "1.9.0",
+      "@aws-cdk/aws-cloudformation": "1.9.0",
+      "@aws-cdk/aws-route53": "1.9.0",
+      "@aws-cdk/aws-certificatemanager": "1.9.0",
+      "@aws-cdk/aws-elasticloadbalancingv2": "1.9.0",
+      "@aws-cdk/aws-autoscaling": "1.9.0",
+      "@aws-cdk/aws-sns-subscriptions": "1.9.0",
+      "@aws-cdk/aws-autoscaling-hooktargets": "1.9.0",
+      "@aws-cdk/aws-ecr": "1.9.0",
+      "@aws-cdk/aws-ecr-assets": "1.9.0",
+      "@aws-cdk/aws-apigateway": "1.9.0",
+      "@aws-cdk/aws-cloudfront": "1.9.0",
+      "@aws-cdk/aws-route53-targets": "1.9.0",
+      "@aws-cdk/aws-secretsmanager": "1.9.0",
+      "@aws-cdk/aws-servicediscovery": "1.9.0",
+      "@aws-cdk/aws-ecs": "1.9.0",
+      "jsii-runtime": "Python/3.7.4"
+    }
+  }
+}

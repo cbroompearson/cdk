@@ -1,0 +1,101 @@
+{
+  "networkMode": "bridge",
+  "containerDefinitions": [
+    {
+      "name": "oculus-api-dev-app",
+    "taskRoleArn": "arn:aws:iam::829809672214:role/ocu-dev-ecs-task-role",
+    "executionRoleArn": "arn:aws:iam::829809672214:role/ocu-dev-ecs-task-role",
+      "cpu": 1024,
+      "memoryReservation": 2048,
+      "essential": true,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "oculus-api-dev-app",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "oculus-api-dev-app"
+        }
+      },
+     "portMappings": [
+        {
+          "hostPort": 8080,
+          "containerPort": 8080,
+          "protocol": "tcp"
+        },
+        {
+          "hostPort": 443,
+          "containerPort": 8443,
+          "protocol": "tcp"
+        },
+       { 
+          "hostPort": 27017,
+          "containerPort": 27017,
+          "protocol": "tcp"
+        }
+      ],
+      "environment": [
+        {
+          "name": "HEAP_MAX",
+          "value": "4000m"
+        },
+        {
+          "name": "ssl_domain",
+          "value": "oculus-api-dev.nonprod.pearsoncms.net"
+        },
+        {
+          "name": "HEAP_MIN",
+          "value": "2000m"
+        },
+        {
+          "name": "SPRING_PROFILES_ACTIVE",
+          "value": "dev"
+        },
+         {
+          "name": "NODE_ENV",
+          "value": "dev"
+        },
+         {
+          "name": "ENV",
+          "value": "dev"
+        },
+         {
+          "name": "REMOTE_AUTH",
+          "value": "false"
+        }
+      ],
+      "mountPoints": [
+        {
+          "sourceVolume": "TOMCAT",
+          "containerPath": "/usr/local/tomcat/logs"
+        },
+        {
+          "sourceVolume": "VARLOGS",
+          "containerPath": "/var/log"
+        }
+      ],
+      "volumesFrom": [],
+      "ulimits": [
+          {
+              "name": "nofile",
+              "softLimit": 2000,
+              "hardLimit": 6000
+          }
+      ]
+    }
+  ],
+  "family": "oculus-api-dev-app",
+  "volumes": [
+    {
+      "name": "TOMCAT",
+      "host": {
+        "sourcePath": "/var/log/containerlogs/tomcat"
+      }
+    },
+    {
+      "name": "VARLOGS",
+      "host": {
+        "sourcePath": "/var/log/containerlogs/logs"
+      }
+    }
+  ]
+}

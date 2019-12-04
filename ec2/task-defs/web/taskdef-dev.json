@@ -1,0 +1,115 @@
+{
+    "networkMode": "awsvpc",
+    "requiresCompatibilities": [
+      "FARGATE"
+    ],
+    "taskRoleArn": "arn:aws:iam::829809672214:role/ocu-dev-ecs-task-role",
+    "executionRoleArn": "arn:aws:iam::829809672214:role/ocu-dev-ecs-task-role",
+    "cpu": "2048",
+    "memory": "4096",
+    "containerDefinitions": [
+      {
+        "logConfiguration": {
+          "logDriver": "awslogs",
+          "options": {
+            "awslogs-group": "ocu-dev-web-logs",
+            "awslogs-region": "us-east-1",
+            "awslogs-stream-prefix": "dev"
+          }
+        },
+        "secrets": [{
+          "name": "NEWRELIC_LICENSE_KEY",
+          "valueFrom": "arn:aws:secretsmanager:us-east-1:829809672214:secret:newrelic_licencse_key-hlClII"
+        }],
+        "portMappings": [
+          {
+            "hostPort": 3030,
+            "containerPort": 3030,
+            "protocol": "tcp"
+          }
+        ],
+        "image": "346147488134.dkr.ecr.us-east-1.amazonaws.com/oculus-web:<<IMAGEID>>",
+        "essential": true,
+        "environment": [
+          {
+            "name": "NEWRELIC_APP",
+            "value": "OCULUS-WEB-DEV"
+          },
+          {
+            "name": "NEWRELIC_ENABLE",
+            "value": "<<RELIC_ENABLE>>"
+          }
+        ],
+        "name": "ocu-dev-web"
+      },
+      {
+        "name": "nginx",
+        "portMappings": [
+           {
+             "hostPort": 80,
+             "containerPort": 80,
+             "protocol": "tcp"
+           },
+           {
+             "hostPort": 443,
+             "containerPort": 443,
+             "protocol": "tcp"
+           }
+        ],
+        "logConfiguration": {
+          "logDriver": "awslogs",
+          "options": {
+            "awslogs-group": "ocu-dev-web-nginx-logs",
+            "awslogs-region": "us-east-1",
+            "awslogs-stream-prefix": "dev"
+          }
+        },
+        "image": "346147488134.dkr.ecr.us-east-1.amazonaws.com/content-nginx:ocu-4.0",
+        "essential": false,
+        "environment": [
+           {
+             "name": "LOCAL_APP_SERVER",
+             "value": "localhost:3030"
+           },
+           {
+            "name": "SSL_DOMAIN",
+            "value": "*.pearsoncms.net"
+          },
+          {
+            "name": "CACHE_SERVER_ENDPOINT",
+            "value": "none"
+          },
+          {
+            "name": "CACHE_SERVER_PORT",
+            "value": "6379"
+          },
+          {
+            "name": "NGINX_PORT",
+            "value": "443"
+          }
+        ]
+      },
+      {
+        "name": "xray",
+        "portMappings": [
+           {
+             "hostPort": 2000,
+             "containerPort": 2000,
+             "protocol": "tcp"
+           }
+        ],
+        "logConfiguration": {
+          "logDriver": "awslogs",
+          "options": {
+            "awslogs-group": "ocu-dev-web-xray-logs",
+            "awslogs-region": "us-east-1",
+            "awslogs-stream-prefix": "dev"
+          }
+        },
+        "image": "346147488134.dkr.ecr.us-east-1.amazonaws.com/xray-fargate:1.0",
+        "essential": false,
+        "environment": [
+        ]
+      }
+    ]
+  }

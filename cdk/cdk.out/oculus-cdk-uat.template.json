@@ -1,0 +1,2452 @@
+{
+  "Resources": {
+    "FlowLog22E63E81": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "vpc-flow-logs.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "Oculus-cb-cdk"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/FlowLog/Resource"
+      }
+    },
+    "FlowLogDefaultPolicy695E1D6F": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "iam:PassRole",
+                "logs:CreateLogGroup",
+                "logs:DescribeLogGroups",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "FlowLogDefaultPolicy695E1D6F",
+        "Roles": [
+          {
+            "Ref": "FlowLog22E63E81"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/FlowLog/DefaultPolicy/Resource"
+      }
+    },
+    "LogGroupF5B46931": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "oculus-cdk-uat",
+        "RetentionInDays": 365
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/LogGroup/Resource"
+      }
+    },
+    "oculuscdkuatvpc95A0A505": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "10.118.0.0/16",
+        "EnableDnsHostnames": true,
+        "EnableDnsSupport": true,
+        "InstanceTenancy": "default",
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "oculus-cdk-uat/oculus-cdk-uat-vpc"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/Resource"
+      }
+    },
+    "oculuscdkuatvpcPublicSubnet1Subnet32EC7700": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.118.0.0/18",
+        "VpcId": {
+          "Ref": "oculuscdkuatvpc95A0A505"
+        },
+        "AvailabilityZone": "us-east-1a",
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "oculus-cdk-uat/oculus-cdk-uat-vpc/PublicSubnet1"
+          },
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Public"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/PublicSubnet1/Subnet"
+      }
+    },
+    "oculuscdkuatvpcPublicSubnet1RouteTable56A22B99": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "oculuscdkuatvpc95A0A505"
+        },
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "oculus-cdk-uat/oculus-cdk-uat-vpc/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/PublicSubnet1/RouteTable"
+      }
+    },
+    "oculuscdkuatvpcPublicSubnet1RouteTableAssociation58ED66A8": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "oculuscdkuatvpcPublicSubnet1RouteTable56A22B99"
+        },
+        "SubnetId": {
+          "Ref": "oculuscdkuatvpcPublicSubnet1Subnet32EC7700"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/PublicSubnet1/RouteTableAssociation"
+      }
+    },
+    "oculuscdkuatvpcPublicSubnet1DefaultRouteDDF8F23B": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "oculuscdkuatvpcPublicSubnet1RouteTable56A22B99"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "oculuscdkuatvpcIGWF9235F45"
+        }
+      },
+      "DependsOn": [
+        "oculuscdkuatvpcVPCGW3AB64D1C"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/PublicSubnet1/DefaultRoute"
+      }
+    },
+    "oculuscdkuatvpcPublicSubnet1EIPA6AB149E": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc"
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/PublicSubnet1/EIP"
+      }
+    },
+    "oculuscdkuatvpcPublicSubnet1NATGateway7F1A0F40": {
+      "Type": "AWS::EC2::NatGateway",
+      "Properties": {
+        "AllocationId": {
+          "Fn::GetAtt": [
+            "oculuscdkuatvpcPublicSubnet1EIPA6AB149E",
+            "AllocationId"
+          ]
+        },
+        "SubnetId": {
+          "Ref": "oculuscdkuatvpcPublicSubnet1Subnet32EC7700"
+        },
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "oculus-cdk-uat/oculus-cdk-uat-vpc/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/PublicSubnet1/NATGateway"
+      }
+    },
+    "oculuscdkuatvpcPublicSubnet2Subnet51F26073": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.118.64.0/18",
+        "VpcId": {
+          "Ref": "oculuscdkuatvpc95A0A505"
+        },
+        "AvailabilityZone": "us-east-1b",
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "oculus-cdk-uat/oculus-cdk-uat-vpc/PublicSubnet2"
+          },
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Public"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/PublicSubnet2/Subnet"
+      }
+    },
+    "oculuscdkuatvpcPublicSubnet2RouteTable2FC89CC7": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "oculuscdkuatvpc95A0A505"
+        },
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "oculus-cdk-uat/oculus-cdk-uat-vpc/PublicSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/PublicSubnet2/RouteTable"
+      }
+    },
+    "oculuscdkuatvpcPublicSubnet2RouteTableAssociation038AB007": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "oculuscdkuatvpcPublicSubnet2RouteTable2FC89CC7"
+        },
+        "SubnetId": {
+          "Ref": "oculuscdkuatvpcPublicSubnet2Subnet51F26073"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/PublicSubnet2/RouteTableAssociation"
+      }
+    },
+    "oculuscdkuatvpcPublicSubnet2DefaultRoute26A21DD5": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "oculuscdkuatvpcPublicSubnet2RouteTable2FC89CC7"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "oculuscdkuatvpcIGWF9235F45"
+        }
+      },
+      "DependsOn": [
+        "oculuscdkuatvpcVPCGW3AB64D1C"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/PublicSubnet2/DefaultRoute"
+      }
+    },
+    "oculuscdkuatvpcPublicSubnet2EIP8C65E988": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc"
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/PublicSubnet2/EIP"
+      }
+    },
+    "oculuscdkuatvpcPublicSubnet2NATGateway64714C58": {
+      "Type": "AWS::EC2::NatGateway",
+      "Properties": {
+        "AllocationId": {
+          "Fn::GetAtt": [
+            "oculuscdkuatvpcPublicSubnet2EIP8C65E988",
+            "AllocationId"
+          ]
+        },
+        "SubnetId": {
+          "Ref": "oculuscdkuatvpcPublicSubnet2Subnet51F26073"
+        },
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "oculus-cdk-uat/oculus-cdk-uat-vpc/PublicSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/PublicSubnet2/NATGateway"
+      }
+    },
+    "oculuscdkuatvpcPrivateSubnet1Subnet29D567B5": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.118.128.0/18",
+        "VpcId": {
+          "Ref": "oculuscdkuatvpc95A0A505"
+        },
+        "AvailabilityZone": "us-east-1a",
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "oculus-cdk-uat/oculus-cdk-uat-vpc/PrivateSubnet1"
+          },
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Private"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Private"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/PrivateSubnet1/Subnet"
+      }
+    },
+    "oculuscdkuatvpcPrivateSubnet1RouteTable1EE930CF": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "oculuscdkuatvpc95A0A505"
+        },
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "oculus-cdk-uat/oculus-cdk-uat-vpc/PrivateSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/PrivateSubnet1/RouteTable"
+      }
+    },
+    "oculuscdkuatvpcPrivateSubnet1RouteTableAssociation225FF258": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "oculuscdkuatvpcPrivateSubnet1RouteTable1EE930CF"
+        },
+        "SubnetId": {
+          "Ref": "oculuscdkuatvpcPrivateSubnet1Subnet29D567B5"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/PrivateSubnet1/RouteTableAssociation"
+      }
+    },
+    "oculuscdkuatvpcPrivateSubnet1DefaultRoute12D5F461": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "oculuscdkuatvpcPrivateSubnet1RouteTable1EE930CF"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "NatGatewayId": {
+          "Ref": "oculuscdkuatvpcPublicSubnet1NATGateway7F1A0F40"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/PrivateSubnet1/DefaultRoute"
+      }
+    },
+    "oculuscdkuatvpcPrivateSubnet2Subnet734EDDCC": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.118.192.0/18",
+        "VpcId": {
+          "Ref": "oculuscdkuatvpc95A0A505"
+        },
+        "AvailabilityZone": "us-east-1b",
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "oculus-cdk-uat/oculus-cdk-uat-vpc/PrivateSubnet2"
+          },
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Private"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Private"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/PrivateSubnet2/Subnet"
+      }
+    },
+    "oculuscdkuatvpcPrivateSubnet2RouteTable13832BD4": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "oculuscdkuatvpc95A0A505"
+        },
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "oculus-cdk-uat/oculus-cdk-uat-vpc/PrivateSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/PrivateSubnet2/RouteTable"
+      }
+    },
+    "oculuscdkuatvpcPrivateSubnet2RouteTableAssociationDA37A4A2": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "oculuscdkuatvpcPrivateSubnet2RouteTable13832BD4"
+        },
+        "SubnetId": {
+          "Ref": "oculuscdkuatvpcPrivateSubnet2Subnet734EDDCC"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/PrivateSubnet2/RouteTableAssociation"
+      }
+    },
+    "oculuscdkuatvpcPrivateSubnet2DefaultRoute32479E16": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "oculuscdkuatvpcPrivateSubnet2RouteTable13832BD4"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "NatGatewayId": {
+          "Ref": "oculuscdkuatvpcPublicSubnet2NATGateway64714C58"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/PrivateSubnet2/DefaultRoute"
+      }
+    },
+    "oculuscdkuatvpcIGWF9235F45": {
+      "Type": "AWS::EC2::InternetGateway",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "oculus-cdk-uat/oculus-cdk-uat-vpc"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/IGW"
+      }
+    },
+    "oculuscdkuatvpcVPCGW3AB64D1C": {
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+      "Properties": {
+        "VpcId": {
+          "Ref": "oculuscdkuatvpc95A0A505"
+        },
+        "InternetGatewayId": {
+          "Ref": "oculuscdkuatvpcIGWF9235F45"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/oculus-cdk-uat-vpc/VPCGW"
+      }
+    },
+    "FlowLogs": {
+      "Type": "AWS::EC2::FlowLog",
+      "Properties": {
+        "ResourceId": {
+          "Ref": "oculuscdkuatvpc95A0A505"
+        },
+        "ResourceType": "VPC",
+        "TrafficType": "ALL",
+        "DeliverLogsPermissionArn": {
+          "Fn::GetAtt": [
+            "FlowLog22E63E81",
+            "Arn"
+          ]
+        },
+        "LogDestinationType": "cloud-watch-logs",
+        "LogGroupName": {
+          "Fn::Join": [
+            "",
+            [
+              {
+                "Ref": "LogGroupF5B46931"
+              },
+              "-uat"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/FlowLogs"
+      }
+    },
+    "EcSSG8314FCBD": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "Security Group for Oculus vpc",
+        "GroupName": "oculus-cdk-uat-vpc-sg",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "SecurityGroupIngress": [
+          {
+            "CidrIp": "159.182.0.0/16",
+            "Description": "from 159.182.0.0/16:22",
+            "FromPort": 22,
+            "IpProtocol": "tcp",
+            "ToPort": 22
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "Oculus-cb-cdk"
+          }
+        ],
+        "VpcId": {
+          "Ref": "oculuscdkuatvpc95A0A505"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/EcSSG/Resource"
+      }
+    },
+    "AlbSGE6D0E5D1": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "Security group for oculus ALB",
+        "GroupName": "oculus-cdk-uat-alb-sg",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "SecurityGroupIngress": [
+          {
+            "CidrIp": "159.182.0.0/16",
+            "Description": "from 159.182.0.0/16:443",
+            "FromPort": 443,
+            "IpProtocol": "tcp",
+            "ToPort": 443
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "Oculus-cb-cdk"
+          }
+        ],
+        "VpcId": {
+          "Ref": "oculuscdkuatvpc95A0A505"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/AlbSG/Resource"
+      }
+    },
+    "ALBAEE750D2": {
+      "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+      "Properties": {
+        "Scheme": "internet-facing",
+        "SecurityGroups": [
+          {
+            "Fn::GetAtt": [
+              "AlbSGE6D0E5D1",
+              "GroupId"
+            ]
+          }
+        ],
+        "Subnets": [
+          {
+            "Ref": "oculuscdkuatvpcPublicSubnet1Subnet32EC7700"
+          },
+          {
+            "Ref": "oculuscdkuatvpcPublicSubnet2Subnet51F26073"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "Oculus-cb-cdk"
+          }
+        ],
+        "Type": "application"
+      },
+      "DependsOn": [
+        "oculuscdkuatvpcPublicSubnet1DefaultRouteDDF8F23B",
+        "oculuscdkuatvpcPublicSubnet2DefaultRoute26A21DD5"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/ALB/Resource"
+      }
+    },
+    "ALBListener3B99FF85": {
+      "Type": "AWS::ElasticLoadBalancingV2::Listener",
+      "Properties": {
+        "DefaultActions": [
+          {
+            "TargetGroupArn": {
+              "Ref": "ALBListenerECSWebGroupDD20DAE4"
+            },
+            "Type": "forward"
+          }
+        ],
+        "LoadBalancerArn": {
+          "Ref": "ALBAEE750D2"
+        },
+        "Port": 443,
+        "Protocol": "HTTPS",
+        "Certificates": [
+          {
+            "CertificateArn": "arn:aws:acm:us-east-1:829809672214:certificate/a84bb369-03ce-4e5e-9d32-8c84609cad1e"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/ALB/Listener/Resource"
+      }
+    },
+    "ALBListenerECSAPIGroup52879595": {
+      "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+      "Properties": {
+        "HealthCheckPath": "/oculus-api/health",
+        "Port": 8080,
+        "Protocol": "HTTP",
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "Oculus-cb-cdk"
+          }
+        ],
+        "TargetType": "ip",
+        "VpcId": {
+          "Ref": "oculuscdkuatvpc95A0A505"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/ALB/Listener/ECSAPIGroup/Resource"
+      }
+    },
+    "ALBListenerECSAPIRule75B9D990": {
+      "Type": "AWS::ElasticLoadBalancingV2::ListenerRule",
+      "Properties": {
+        "Actions": [
+          {
+            "TargetGroupArn": {
+              "Ref": "ALBListenerECSAPIGroup52879595"
+            },
+            "Type": "forward"
+          }
+        ],
+        "Conditions": [
+          {
+            "Field": "path-pattern",
+            "Values": [
+              "/oculus-api/*"
+            ]
+          }
+        ],
+        "ListenerArn": {
+          "Ref": "ALBListener3B99FF85"
+        },
+        "Priority": 1
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/ALB/Listener/ECSAPIRule/Resource"
+      }
+    },
+    "ALBListenerECSTCAGroup698EE084": {
+      "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+      "Properties": {
+        "HealthCheckPath": "/tca/swagger-ui/index.html",
+        "Port": 8080,
+        "Protocol": "HTTP",
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "Oculus-cb-cdk"
+          }
+        ],
+        "TargetType": "ip",
+        "VpcId": {
+          "Ref": "oculuscdkuatvpc95A0A505"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/ALB/Listener/ECSTCAGroup/Resource"
+      }
+    },
+    "ALBListenerECSTCARule31381C99": {
+      "Type": "AWS::ElasticLoadBalancingV2::ListenerRule",
+      "Properties": {
+        "Actions": [
+          {
+            "TargetGroupArn": {
+              "Ref": "ALBListenerECSTCAGroup698EE084"
+            },
+            "Type": "forward"
+          }
+        ],
+        "Conditions": [
+          {
+            "Field": "path-pattern",
+            "Values": [
+              "/tca/*"
+            ]
+          }
+        ],
+        "ListenerArn": {
+          "Ref": "ALBListener3B99FF85"
+        },
+        "Priority": 2
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/ALB/Listener/ECSTCARule/Resource"
+      }
+    },
+    "ALBListenerECSWebGroupDD20DAE4": {
+      "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+      "Properties": {
+        "HealthCheckPath": "/",
+        "Port": 3030,
+        "Protocol": "HTTP",
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "Oculus-cb-cdk"
+          }
+        ],
+        "TargetType": "ip",
+        "VpcId": {
+          "Ref": "oculuscdkuatvpc95A0A505"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/ALB/Listener/ECSWebGroup/Resource"
+      }
+    },
+    "ApiTargetGroup5723F19D": {
+      "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+      "Properties": {
+        "Port": 8080,
+        "Protocol": "HTTP",
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "Oculus-cb-cdk"
+          }
+        ],
+        "VpcId": {
+          "Ref": "oculuscdkuatvpc95A0A505"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/ApiTargetGroup/Resource"
+      }
+    },
+    "WebTargetGroup12079923": {
+      "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+      "Properties": {
+        "Port": 3030,
+        "Protocol": "HTTP",
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "Oculus-cb-cdk"
+          }
+        ],
+        "VpcId": {
+          "Ref": "oculuscdkuatvpc95A0A505"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/WebTargetGroup/Resource"
+      }
+    },
+    "TcaTargetGroupE57E3D9C": {
+      "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+      "Properties": {
+        "Port": 8080,
+        "Protocol": "HTTP",
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "Oculus-cb-cdk"
+          }
+        ],
+        "VpcId": {
+          "Ref": "oculuscdkuatvpc95A0A505"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/TcaTargetGroup/Resource"
+      }
+    },
+    "ECSCluster7D463CD4": {
+      "Type": "AWS::ECS::Cluster",
+      "Properties": {
+        "ClusterName": "oculus-cdk-uat",
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "Oculus-cb-cdk"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/ECSCluster/Resource"
+      }
+    },
+    "ECSExecutionRoleA044C6CA": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ecs-tasks.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "RoleName": "oculus-cdk-uat-execution-role",
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "Oculus-cb-cdk"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/ECSExecutionRole/Resource"
+      }
+    },
+    "ECSExecutionRoleDefaultPolicy91A8E3CE": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
+                "elasticloadbalancing:DeregisterTargets",
+                "elasticloadbalancing:Describe*",
+                "elasticloadbalancing:RegisterInstancesWithLoadBalancer",
+                "elasticloadbalancing:RegisterTargets",
+                "ec2:Describe*",
+                "ec2:AuthorizeSecurityGroupIngress",
+                "sts:AssumeRole",
+                "ssm:GetParameters",
+                "secretsmanager:GetSecretValue",
+                "ecr:GetAuthorizationToken",
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchGetImage",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents",
+                "application-autoscaling:*",
+                "cloudwatch:DescribeAlarms",
+                "cloudwatch:PutMetricAlarm"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchGetImage"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:ecr:us-east-1:346147488134:repository/oculus-api"
+            },
+            {
+              "Action": "ecr:GetAuthorizationToken",
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "LogGroupF5B46931",
+                  "Arn"
+                ]
+              }
+            },
+            {
+              "Action": [
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchGetImage"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:ecr:us-east-1:346147488134:repository/oculus-web"
+            },
+            {
+              "Action": [
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchGetImage"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:ecr:us-east-1:346147488134:repository/oculus-tca-api"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "ECSExecutionRoleDefaultPolicy91A8E3CE",
+        "Roles": [
+          {
+            "Ref": "ECSExecutionRoleA044C6CA"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/ECSExecutionRole/DefaultPolicy/Resource"
+      }
+    },
+    "ECSTaskRoleF2ADB362": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ecs-tasks.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "RoleName": "oculus-cdk-uat-task-role",
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "Oculus-cb-cdk"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/ECSTaskRole/Resource"
+      }
+    },
+    "ECSTaskRoleDefaultPolicy82FC9293": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents",
+                "dynamodb:Query",
+                "dynamodb:ListTables",
+                "secretsmanager:GetSecretValue",
+                "kms:Decrypt"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "ECSTaskRoleDefaultPolicy82FC9293",
+        "Roles": [
+          {
+            "Ref": "ECSTaskRoleF2ADB362"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/ECSTaskRole/DefaultPolicy/Resource"
+      }
+    },
+    "APIFargateTask4866CA56": {
+      "Type": "AWS::ECS::TaskDefinition",
+      "Properties": {
+        "ContainerDefinitions": [
+          {
+            "Essential": true,
+            "Image": {
+              "Fn::Join": [
+                "",
+                [
+                  "346147488134.dkr.ecr.us-east-1.",
+                  {
+                    "Ref": "AWS::URLSuffix"
+                  },
+                  "/oculus-api:devqaurl"
+                ]
+              ]
+            },
+            "LogConfiguration": {
+              "LogDriver": "awslogs",
+              "Options": {
+                "awslogs-group": {
+                  "Ref": "LogGroupF5B46931"
+                },
+                "awslogs-stream-prefix": "oculus-cdk-uat-api",
+                "awslogs-region": "us-east-1"
+              }
+            },
+            "Name": "oculus-cdk-uat-api",
+            "PortMappings": [
+              {
+                "ContainerPort": 8080,
+                "HostPort": 8080,
+                "Protocol": "tcp"
+              }
+            ]
+          }
+        ],
+        "Cpu": "256",
+        "ExecutionRoleArn": {
+          "Fn::GetAtt": [
+            "ECSExecutionRoleA044C6CA",
+            "Arn"
+          ]
+        },
+        "Family": "oculus-cdk-uat-api",
+        "Memory": "512",
+        "NetworkMode": "awsvpc",
+        "RequiresCompatibilities": [
+          "FARGATE"
+        ],
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "Oculus-cb-cdk"
+          }
+        ],
+        "TaskRoleArn": {
+          "Fn::GetAtt": [
+            "ECSTaskRoleF2ADB362",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/APIFargateTask/Resource"
+      }
+    },
+    "WebFargateTask53DB7E54": {
+      "Type": "AWS::ECS::TaskDefinition",
+      "Properties": {
+        "ContainerDefinitions": [
+          {
+            "Essential": true,
+            "Image": {
+              "Fn::Join": [
+                "",
+                [
+                  "346147488134.dkr.ecr.us-east-1.",
+                  {
+                    "Ref": "AWS::URLSuffix"
+                  },
+                  "/oculus-web:removeMetaMockup"
+                ]
+              ]
+            },
+            "LogConfiguration": {
+              "LogDriver": "awslogs",
+              "Options": {
+                "awslogs-group": {
+                  "Ref": "LogGroupF5B46931"
+                },
+                "awslogs-stream-prefix": "oculus-cdk-uat-web",
+                "awslogs-region": "us-east-1"
+              }
+            },
+            "Name": "oculus-cdk-uat-web",
+            "PortMappings": [
+              {
+                "ContainerPort": 3030,
+                "HostPort": 3030,
+                "Protocol": "tcp"
+              }
+            ]
+          }
+        ],
+        "Cpu": "256",
+        "ExecutionRoleArn": {
+          "Fn::GetAtt": [
+            "ECSExecutionRoleA044C6CA",
+            "Arn"
+          ]
+        },
+        "Family": "oculus-cdk-uat-web",
+        "Memory": "512",
+        "NetworkMode": "awsvpc",
+        "RequiresCompatibilities": [
+          "FARGATE"
+        ],
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "Oculus-cb-cdk"
+          }
+        ],
+        "TaskRoleArn": {
+          "Fn::GetAtt": [
+            "ECSTaskRoleF2ADB362",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/WebFargateTask/Resource"
+      }
+    },
+    "TcaFargateTaskAE2871A3": {
+      "Type": "AWS::ECS::TaskDefinition",
+      "Properties": {
+        "ContainerDefinitions": [
+          {
+            "Essential": true,
+            "Image": {
+              "Fn::Join": [
+                "",
+                [
+                  "346147488134.dkr.ecr.us-east-1.",
+                  {
+                    "Ref": "AWS::URLSuffix"
+                  },
+                  "/oculus-tca-api:ocu-1109"
+                ]
+              ]
+            },
+            "LogConfiguration": {
+              "LogDriver": "awslogs",
+              "Options": {
+                "awslogs-group": {
+                  "Ref": "LogGroupF5B46931"
+                },
+                "awslogs-stream-prefix": "oculus-cdk-uat-tca",
+                "awslogs-region": "us-east-1"
+              }
+            },
+            "Name": "oculus-cdk-uat-tca",
+            "PortMappings": [
+              {
+                "ContainerPort": 8080,
+                "HostPort": 8080,
+                "Protocol": "tcp"
+              }
+            ]
+          }
+        ],
+        "Cpu": "256",
+        "ExecutionRoleArn": {
+          "Fn::GetAtt": [
+            "ECSExecutionRoleA044C6CA",
+            "Arn"
+          ]
+        },
+        "Family": "oculus-cdk-uat-tca",
+        "Memory": "512",
+        "NetworkMode": "awsvpc",
+        "RequiresCompatibilities": [
+          "FARGATE"
+        ],
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "Oculus-cb-cdk"
+          }
+        ],
+        "TaskRoleArn": {
+          "Fn::GetAtt": [
+            "ECSTaskRoleF2ADB362",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/TcaFargateTask/Resource"
+      }
+    },
+    "FargateServiceAPIService2D690B6F": {
+      "Type": "AWS::ECS::Service",
+      "Properties": {
+        "TaskDefinition": {
+          "Ref": "APIFargateTask4866CA56"
+        },
+        "Cluster": {
+          "Ref": "ECSCluster7D463CD4"
+        },
+        "DeploymentConfiguration": {
+          "MaximumPercent": 200,
+          "MinimumHealthyPercent": 50
+        },
+        "DesiredCount": 1,
+        "EnableECSManagedTags": false,
+        "HealthCheckGracePeriodSeconds": 60,
+        "LaunchType": "FARGATE",
+        "LoadBalancers": [
+          {
+            "ContainerName": "oculus-cdk-uat-api",
+            "ContainerPort": 8080,
+            "TargetGroupArn": {
+              "Ref": "ALBListenerECSAPIGroup52879595"
+            }
+          }
+        ],
+        "NetworkConfiguration": {
+          "AwsvpcConfiguration": {
+            "AssignPublicIp": "DISABLED",
+            "SecurityGroups": [
+              {
+                "Fn::GetAtt": [
+                  "FargateServiceAPISecurityGroupE23F0CF7",
+                  "GroupId"
+                ]
+              }
+            ],
+            "Subnets": [
+              {
+                "Ref": "oculuscdkuatvpcPrivateSubnet1Subnet29D567B5"
+              },
+              {
+                "Ref": "oculuscdkuatvpcPrivateSubnet2Subnet734EDDCC"
+              }
+            ]
+          }
+        },
+        "ServiceName": "oculus-cdk-uat-api",
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "Oculus-cb-cdk"
+          }
+        ]
+      },
+      "DependsOn": [
+        "ALBListenerECSAPIRule75B9D990"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/FargateServiceAPI/Service"
+      }
+    },
+    "FargateServiceAPISecurityGroupE23F0CF7": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "oculus-cdk-uat/FargateServiceAPI/SecurityGroup",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "Oculus-cb-cdk"
+          }
+        ],
+        "VpcId": {
+          "Ref": "oculuscdkuatvpc95A0A505"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/FargateServiceAPI/SecurityGroup/Resource"
+      }
+    },
+    "FargateServiceAPISecurityGroupfromoculuscdkuatAlbSGAFCB694880802A50158B": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "Properties": {
+        "IpProtocol": "tcp",
+        "Description": "Load balancer to target",
+        "FromPort": 8080,
+        "GroupId": {
+          "Fn::GetAtt": [
+            "FargateServiceAPISecurityGroupE23F0CF7",
+            "GroupId"
+          ]
+        },
+        "SourceSecurityGroupId": {
+          "Fn::GetAtt": [
+            "AlbSGE6D0E5D1",
+            "GroupId"
+          ]
+        },
+        "ToPort": 8080
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/FargateServiceAPI/SecurityGroup/from oculuscdkuatAlbSGAFCB6948:8080"
+      }
+    },
+    "FargateServiceAPITaskCountTargetD4665865": {
+      "Type": "AWS::ApplicationAutoScaling::ScalableTarget",
+      "Properties": {
+        "MaxCapacity": 5,
+        "MinCapacity": 1,
+        "ResourceId": {
+          "Fn::Join": [
+            "",
+            [
+              "service/",
+              {
+                "Ref": "ECSCluster7D463CD4"
+              },
+              "/",
+              {
+                "Fn::GetAtt": [
+                  "FargateServiceAPIService2D690B6F",
+                  "Name"
+                ]
+              }
+            ]
+          ]
+        },
+        "RoleARN": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":iam::829809672214:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService"
+            ]
+          ]
+        },
+        "ScalableDimension": "ecs:service:DesiredCount",
+        "ServiceNamespace": "ecs"
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/FargateServiceAPI/TaskCount/Target/Resource"
+      }
+    },
+    "FargateServiceAPITaskCountTargetApiCpuScalingC514A006": {
+      "Type": "AWS::ApplicationAutoScaling::ScalingPolicy",
+      "Properties": {
+        "PolicyName": "oculuscdkuatFargateServiceAPITaskCountTargetApiCpuScalingA0678E3A",
+        "PolicyType": "TargetTrackingScaling",
+        "ScalingTargetId": {
+          "Ref": "FargateServiceAPITaskCountTargetD4665865"
+        },
+        "TargetTrackingScalingPolicyConfiguration": {
+          "PredefinedMetricSpecification": {
+            "PredefinedMetricType": "ECSServiceAverageCPUUtilization"
+          },
+          "TargetValue": 50
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/FargateServiceAPI/TaskCount/Target/ApiCpuScaling/Resource"
+      }
+    },
+    "FargateServiceWebServiceDBCCCCEC": {
+      "Type": "AWS::ECS::Service",
+      "Properties": {
+        "TaskDefinition": {
+          "Ref": "WebFargateTask53DB7E54"
+        },
+        "Cluster": {
+          "Ref": "ECSCluster7D463CD4"
+        },
+        "DeploymentConfiguration": {
+          "MaximumPercent": 200,
+          "MinimumHealthyPercent": 50
+        },
+        "DesiredCount": 1,
+        "EnableECSManagedTags": false,
+        "HealthCheckGracePeriodSeconds": 60,
+        "LaunchType": "FARGATE",
+        "LoadBalancers": [
+          {
+            "ContainerName": "oculus-cdk-uat-web",
+            "ContainerPort": 3030,
+            "TargetGroupArn": {
+              "Ref": "ALBListenerECSWebGroupDD20DAE4"
+            }
+          }
+        ],
+        "NetworkConfiguration": {
+          "AwsvpcConfiguration": {
+            "AssignPublicIp": "DISABLED",
+            "SecurityGroups": [
+              {
+                "Fn::GetAtt": [
+                  "FargateServiceWebSecurityGroup9B2D885B",
+                  "GroupId"
+                ]
+              }
+            ],
+            "Subnets": [
+              {
+                "Ref": "oculuscdkuatvpcPrivateSubnet1Subnet29D567B5"
+              },
+              {
+                "Ref": "oculuscdkuatvpcPrivateSubnet2Subnet734EDDCC"
+              }
+            ]
+          }
+        },
+        "ServiceName": "oculus-cdk-uat-web",
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "Oculus-cb-cdk"
+          }
+        ]
+      },
+      "DependsOn": [
+        "ALBListenerECSAPIGroup52879595",
+        "ALBListenerECSAPIRule75B9D990",
+        "ALBListenerECSTCAGroup698EE084",
+        "ALBListenerECSTCARule31381C99",
+        "ALBListenerECSWebGroupDD20DAE4",
+        "ALBListener3B99FF85"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/FargateServiceWeb/Service"
+      }
+    },
+    "FargateServiceWebSecurityGroup9B2D885B": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "oculus-cdk-uat/FargateServiceWeb/SecurityGroup",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "Oculus-cb-cdk"
+          }
+        ],
+        "VpcId": {
+          "Ref": "oculuscdkuatvpc95A0A505"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/FargateServiceWeb/SecurityGroup/Resource"
+      }
+    },
+    "FargateServiceWebSecurityGroupfromoculuscdkuatAlbSGAFCB6948303013A09B46": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "Properties": {
+        "IpProtocol": "tcp",
+        "Description": "Load balancer to target",
+        "FromPort": 3030,
+        "GroupId": {
+          "Fn::GetAtt": [
+            "FargateServiceWebSecurityGroup9B2D885B",
+            "GroupId"
+          ]
+        },
+        "SourceSecurityGroupId": {
+          "Fn::GetAtt": [
+            "AlbSGE6D0E5D1",
+            "GroupId"
+          ]
+        },
+        "ToPort": 3030
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/FargateServiceWeb/SecurityGroup/from oculuscdkuatAlbSGAFCB6948:3030"
+      }
+    },
+    "FargateServiceWebTaskCountTarget06FCFD34": {
+      "Type": "AWS::ApplicationAutoScaling::ScalableTarget",
+      "Properties": {
+        "MaxCapacity": 5,
+        "MinCapacity": 1,
+        "ResourceId": {
+          "Fn::Join": [
+            "",
+            [
+              "service/",
+              {
+                "Ref": "ECSCluster7D463CD4"
+              },
+              "/",
+              {
+                "Fn::GetAtt": [
+                  "FargateServiceWebServiceDBCCCCEC",
+                  "Name"
+                ]
+              }
+            ]
+          ]
+        },
+        "RoleARN": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":iam::829809672214:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService"
+            ]
+          ]
+        },
+        "ScalableDimension": "ecs:service:DesiredCount",
+        "ServiceNamespace": "ecs"
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/FargateServiceWeb/TaskCount/Target/Resource"
+      }
+    },
+    "FargateServiceWebTaskCountTargetWebCpuScaling7564EA2B": {
+      "Type": "AWS::ApplicationAutoScaling::ScalingPolicy",
+      "Properties": {
+        "PolicyName": "oculuscdkuatFargateServiceWebTaskCountTargetWebCpuScalingFAD4CCB0",
+        "PolicyType": "TargetTrackingScaling",
+        "ScalingTargetId": {
+          "Ref": "FargateServiceWebTaskCountTarget06FCFD34"
+        },
+        "TargetTrackingScalingPolicyConfiguration": {
+          "PredefinedMetricSpecification": {
+            "PredefinedMetricType": "ECSServiceAverageCPUUtilization"
+          },
+          "TargetValue": 50
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/FargateServiceWeb/TaskCount/Target/WebCpuScaling/Resource"
+      }
+    },
+    "FargateServiceTCAService1F850948": {
+      "Type": "AWS::ECS::Service",
+      "Properties": {
+        "TaskDefinition": {
+          "Ref": "TcaFargateTaskAE2871A3"
+        },
+        "Cluster": {
+          "Ref": "ECSCluster7D463CD4"
+        },
+        "DeploymentConfiguration": {
+          "MaximumPercent": 200,
+          "MinimumHealthyPercent": 50
+        },
+        "DesiredCount": 1,
+        "EnableECSManagedTags": false,
+        "HealthCheckGracePeriodSeconds": 60,
+        "LaunchType": "FARGATE",
+        "LoadBalancers": [
+          {
+            "ContainerName": "oculus-cdk-uat-tca",
+            "ContainerPort": 8080,
+            "TargetGroupArn": {
+              "Ref": "ALBListenerECSTCAGroup698EE084"
+            }
+          }
+        ],
+        "NetworkConfiguration": {
+          "AwsvpcConfiguration": {
+            "AssignPublicIp": "DISABLED",
+            "SecurityGroups": [
+              {
+                "Fn::GetAtt": [
+                  "FargateServiceTCASecurityGroup9BD69D38",
+                  "GroupId"
+                ]
+              }
+            ],
+            "Subnets": [
+              {
+                "Ref": "oculuscdkuatvpcPrivateSubnet1Subnet29D567B5"
+              },
+              {
+                "Ref": "oculuscdkuatvpcPrivateSubnet2Subnet734EDDCC"
+              }
+            ]
+          }
+        },
+        "ServiceName": "oculus-cdk-uat-tca",
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "Oculus-cb-cdk"
+          }
+        ]
+      },
+      "DependsOn": [
+        "ALBListenerECSTCARule31381C99"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/FargateServiceTCA/Service"
+      }
+    },
+    "FargateServiceTCASecurityGroup9BD69D38": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "oculus-cdk-uat/FargateServiceTCA/SecurityGroup",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "t_environment",
+            "Value": "UAT"
+          },
+          {
+            "Key": "t_AppID",
+            "Value": "SVC01831"
+          },
+          {
+            "Key": "t_cost_centre",
+            "Value": "10.365.74172.3651039.40857.0000.35"
+          },
+          {
+            "Key": "t_dcl",
+            "Value": "2"
+          },
+          {
+            "Key": "Application",
+            "Value": "oculus-cdk"
+          },
+          {
+            "Key": "Name",
+            "Value": "Oculus-cb-cdk"
+          }
+        ],
+        "VpcId": {
+          "Ref": "oculuscdkuatvpc95A0A505"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/FargateServiceTCA/SecurityGroup/Resource"
+      }
+    },
+    "FargateServiceTCASecurityGroupfromoculuscdkuatAlbSGAFCB69488080D02C6BDE": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "Properties": {
+        "IpProtocol": "tcp",
+        "Description": "Load balancer to target",
+        "FromPort": 8080,
+        "GroupId": {
+          "Fn::GetAtt": [
+            "FargateServiceTCASecurityGroup9BD69D38",
+            "GroupId"
+          ]
+        },
+        "SourceSecurityGroupId": {
+          "Fn::GetAtt": [
+            "AlbSGE6D0E5D1",
+            "GroupId"
+          ]
+        },
+        "ToPort": 8080
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/FargateServiceTCA/SecurityGroup/from oculuscdkuatAlbSGAFCB6948:8080"
+      }
+    },
+    "FargateServiceTCATaskCountTargetBA1C2C8D": {
+      "Type": "AWS::ApplicationAutoScaling::ScalableTarget",
+      "Properties": {
+        "MaxCapacity": 5,
+        "MinCapacity": 1,
+        "ResourceId": {
+          "Fn::Join": [
+            "",
+            [
+              "service/",
+              {
+                "Ref": "ECSCluster7D463CD4"
+              },
+              "/",
+              {
+                "Fn::GetAtt": [
+                  "FargateServiceTCAService1F850948",
+                  "Name"
+                ]
+              }
+            ]
+          ]
+        },
+        "RoleARN": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":iam::829809672214:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService"
+            ]
+          ]
+        },
+        "ScalableDimension": "ecs:service:DesiredCount",
+        "ServiceNamespace": "ecs"
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/FargateServiceTCA/TaskCount/Target/Resource"
+      }
+    },
+    "FargateServiceTCATaskCountTargetTcaCpuScaling8C039299": {
+      "Type": "AWS::ApplicationAutoScaling::ScalingPolicy",
+      "Properties": {
+        "PolicyName": "oculuscdkuatFargateServiceTCATaskCountTargetTcaCpuScaling4E4DF4A2",
+        "PolicyType": "TargetTrackingScaling",
+        "ScalingTargetId": {
+          "Ref": "FargateServiceTCATaskCountTargetBA1C2C8D"
+        },
+        "TargetTrackingScalingPolicyConfiguration": {
+          "PredefinedMetricSpecification": {
+            "PredefinedMetricType": "ECSServiceAverageCPUUtilization"
+          },
+          "TargetValue": 50
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/FargateServiceTCA/TaskCount/Target/TcaCpuScaling/Resource"
+      }
+    },
+    "ServiceAliasRecord7C72B6F0": {
+      "Type": "AWS::Route53::RecordSet",
+      "Properties": {
+        "Name": "ocu-cdk-uat.nonprod.pearsoncms.net.",
+        "Type": "A",
+        "AliasTarget": {
+          "DNSName": {
+            "Fn::GetAtt": [
+              "ALBAEE750D2",
+              "DNSName"
+            ]
+          },
+          "HostedZoneId": {
+            "Fn::GetAtt": [
+              "ALBAEE750D2",
+              "CanonicalHostedZoneID"
+            ]
+          }
+        },
+        "HostedZoneId": "/hostedzone/Z2C02WQLRQB70"
+      },
+      "Metadata": {
+        "aws:cdk:path": "oculus-cdk-uat/ServiceAliasRecord/Resource"
+      }
+    }
+  },
+  "Outputs": {
+    "LoadBalancerDNS": {
+      "Value": {
+        "Fn::GetAtt": [
+          "ALBAEE750D2",
+          "DNSName"
+        ]
+      }
+    }
+  }
+}

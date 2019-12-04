@@ -1,0 +1,44 @@
+{
+    "app": "python3 app.py",
+    "context": {
+        "serviceName": "oculus-cdk",
+        "appId": "SVC01831",
+        "costCentre": "10.365.74172.3651039.40857.0000.35",
+        "dcl": "2",
+        "Name": "Oculus-cdk",
+        "apiHealthPath": "/oculus-api/health",
+        "tcaHealthPath": "/tca/swagger-ui/index.html",
+        "dev": {
+            "cidr": "10.117.0.0/16",
+            "vpcAzCount": 2,
+            "region": "us-east-1",
+            "siteDomain": "oculus-dev",
+            "zoneDomain": "nonprod.pearsoncms.net.",
+            "apiHealthPath": "/oculus-api/health",
+            "tcaHealthPath": "/tca/swagger-ui/index.html"
+        },
+        "qa": {
+            "cidr": "10.118.0.0/16",
+            "vpcAzCount": 2,
+            "region": "us-east-1",
+            "siteDomain": "oculus-qa",
+            "zoneDomain": "nonprod.pearsoncms.net.",
+            "apiHealthPath": "/oculus-api/health",
+            "tcaHealthPath": "/tca/swagger-ui/index.html"
+        },
+        "uat": {
+            "cidr": "10.119.0.0/16",
+            "vpcAzCount": 2,
+            "region": "us-east-1",
+            "siteDomain": "oculus-uat",
+            "zoneDomain": "nonprod.pearsoncms.net.",
+            "apiHealthPath": "/oculus-api/health",
+            "tcaHealthPath": "/tca/swagger-ui/index.html"
+        },
+        "prd": {
+            "cidr": "10.119.0.0/16",
+            "vpcAzCount": 3,
+            "region": "us-east-1"
+        }
+    }
+}

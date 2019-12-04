@@ -1,0 +1,147 @@
+{
+    "networkMode": "awsvpc",
+    "requiresCompatibilities": [
+      "FARGATE"
+    ],
+    "taskRoleArn": "arn:aws:iam::829809672214:role/ocu-dev-ecs-task-role",
+    "executionRoleArn": "arn:aws:iam::829809672214:role/ocu-dev-ecs-task-role",
+    "cpu": "2048",
+    "memory": "4096",
+    "containerDefinitions": [
+      {
+        "logConfiguration": {
+          "logDriver": "awslogs",
+          "options": {
+            "awslogs-group": "ocu-dev-api-logs",
+            "awslogs-region": "us-east-1",
+            "awslogs-stream-prefix": "dev"
+          }
+        },
+        "secrets": [{
+          "name": "NEWRELIC_LICENSE_KEY",
+          "valueFrom": "arn:aws:ssm:us-east-1:829809672214:parameter/new_relic_license"
+        }],
+        "portMappings": [
+          {
+            "hostPort": 8080,
+            "containerPort": 8080,
+            "protocol": "tcp"
+          }
+        ],
+        "environment": [
+            {
+                "name": "HEAP_MAX",
+                "value": "4000m"
+              },
+              {
+                "name": "ssl_domain",
+                "value": "ocu-dev.nonprod.pearsoncms.net"
+              },
+              {
+                "name": "HEAP_MIN",
+                "value": "2000m"
+              },
+              {
+                "name": "SPRING_PROFILES_ACTIVE",
+                "value": "dev"
+              },
+               {
+                "name": "NODE_ENV",
+                "value": "dev"
+              },
+               {
+                "name": "ENV",
+                "value": "dev"
+              },
+               {
+                "name": "REMOTE_AUTH",
+                "value": "false"
+              },
+              {
+                "name": "NEWRELIC_APP",
+                "value": "OCULUS-API-DEV"
+              },
+              {
+                "name": "NEWRELIC_ENABLE",
+                "value": "<<RELIC_ENABLE>>"
+              },
+              {
+                "name": "NEW_RELIC_LOG",
+                "value": "stdout"
+              }
+        ],
+        "image": "346147488134.dkr.ecr.us-east-1.amazonaws.com/oculus-api:<<IMAGEID>>",
+        "essential": true,
+        "name": "ocu-dev-api"
+      },
+      {
+        "name": "nginx",
+        "portMappings": [
+           {
+             "hostPort": 80,
+             "containerPort": 80,
+             "protocol": "tcp"
+           },
+           {
+             "hostPort": 443,
+             "containerPort": 443,
+             "protocol": "tcp"
+           }
+        ],
+        "logConfiguration": {
+          "logDriver": "awslogs",
+          "options": {
+            "awslogs-group": "ocu-dev-api-nginx-logs",
+            "awslogs-region": "us-east-1",
+            "awslogs-stream-prefix": "dev"
+          }
+        },
+        "image": "346147488134.dkr.ecr.us-east-1.amazonaws.com/content-nginx:location_test",
+        "essential": false,
+        "environment": [
+           {
+             "name": "LOCAL_APP_SERVER",
+             "value": "localhost:8080"
+           },
+           {
+            "name": "SSL_DOMAIN",
+            "value": "*.pearsoncms.net"
+          },
+          {
+            "name": "CACHE_SERVER_ENDPOINT",
+            "value": "none"
+          },
+          {
+            "name": "CACHE_SERVER_PORT",
+            "value": "6379"
+          },
+          {
+            "name": "NGINX_PORT",
+            "value": "443"
+          }
+        ]
+      },
+      {
+        "name": "xray",
+        "portMappings": [
+           {
+             "hostPort": 2000,
+             "containerPort": 2000,
+             "protocol": "tcp"
+           }
+        ],
+        "logConfiguration": {
+          "logDriver": "awslogs",
+          "options": {
+            "awslogs-group": "ocu-dev-api-xray-logs",
+            "awslogs-region": "us-east-1",
+            "awslogs-stream-prefix": "dev"
+          }
+        },
+        "image": "346147488134.dkr.ecr.us-east-1.amazonaws.com/xray-fargate:1.0",
+        "essential": false,
+        "environment": [
+        ]
+      }
+    ]
+  }
